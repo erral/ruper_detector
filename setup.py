@@ -23,7 +23,7 @@ setup(name='ruper_detector',
       ],
       entry_points={
         'console_scripts': [
-              'ruper_detector = ruper.main:main',
+              'ruper_detector = ruper_detector.ruper:main',
         ]
       },
       )
