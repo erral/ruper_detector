@@ -1,2 +1,0 @@
-ruper_detector
-==============
