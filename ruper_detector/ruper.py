@@ -12,7 +12,6 @@ RUPER = u'RUPER'
 def detektorea(eguna):
     """ Detektatu Ruper! """
     ruperren_kantak = []
-    print 'Ruper detektatzen...'
     for int_ordua in range(24):
         ordua = '{0:02}'.format(int_ordua)
         url = EITB_MUSIKA_URL.format(eguna, ordua)
@@ -32,6 +31,7 @@ def detektorea(eguna):
 
 
 def inprimatu(eguna):
+    print 'Ruper detektatzen...'
     ruperren_kantak = detektorea(eguna)
     print eguna
     if len(ruperren_kantak) == 1:
