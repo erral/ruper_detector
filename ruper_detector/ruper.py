@@ -28,6 +28,11 @@ def detektorea(eguna):
                         kanta=zutabeak[2].text,
                         ))
 
+    return ruperren_kantak
+
+
+def inprimatu(eguna):
+    ruperren_kantak = detektorea(eguna)
     print eguna
     if len(ruperren_kantak) == 1:
         print 'Gaur Ruper behin bakarrik entzungo dugu. Apuntatu agendan!'
@@ -51,4 +56,4 @@ def main():
 
     arguments = parser.parse_args()
 
-    detektorea(arguments.eguna)
+    inprimatu(arguments.eguna)
