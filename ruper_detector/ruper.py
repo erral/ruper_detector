@@ -52,7 +52,7 @@ def main():
 
     parser.add_argument('eguna',
                         type=str,
-                        help='Idatzi eguna, honako formatu honetan: UUUUHHEE. Adibidez 20131107',
+                        help='Idatzi eguna honako formatu honetan: UUUUHHEE. Adibidez 20131107',
         )
 
     arguments = parser.parse_args()
