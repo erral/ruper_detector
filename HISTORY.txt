@@ -1,8 +1,11 @@
-CHANGELOG
+Changelog
 ============
 
-1.1 (UNRELEASED)
+1.1 (2013-11-08)
 --------------------
+
+- Dokumentazio apur bat
+  [erral]
 
 1.0 (2013-11-07)
 --------------------

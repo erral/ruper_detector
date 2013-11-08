@@ -12,6 +12,57 @@ Ruper noiz jarriko duten esanez.
 
 Broma bat da, hartu umorez!
 
+Instalazioa eta erabilera
+--------------------------
+
+Ruper detektorea Python_ programazio lengoaiarako egindako programa da. Instalatzeko
+beste edozein Python_ liburutegi bezala instalatu behar da. Gaur egun
+pip_ tresna erabiliz egin dezakezu hori::
+
+  $ pip install ruper_detector
+
+Hori eginda, zure sisteman script bat instalatuko da, *ruper_detector*. Bere erabilera
+oso erraza da: pasatu parametro bezala zein datan detektatu nahi duzun Ruper baina
+UUUUHHEE formatua erabiliz, adibidez 20131108, horrela::
+
+  $ ruper_detector 20131108
+
+Pantailan bertan inprimatuko ditu emaitzak::
+
+  $ ruper_detector 20131108
+    Ruper detektatzen...
+    20131108
+    Ondo!!! Gaur Ruper 2 aldiz entzungo dugu!! Hauek dira orduak:
+    10:43:31 EGIN KONTU
+    18:10:58 I-SIGARRILLOS AMARILLOS B
+
+Beste aukera bat, programa hau zure garapen baten integratzea da. Horretarako instalatu
+programa lehen esandako moduan (pip install ruper_detector) edo zure garapenaren
+dependentziak instalatzeko erabiltzen duzun sisteman (gure kasuan `zc.buildout`_
+darabilgun horretarako), eta ondoren inportatu Ruper detektorea zure garapenean::
+
+    >>> from ruper_detector.ruper inport detektorea
+    >>> from pprint import pprint
+    >>> kantak = detektorea('20131108')
+    >>> print(ruperren_kantak)
+    [{'artista': u'ORDORIKA RUPER', 'kanta': u'EGIN KONTU', 'ordua': u'10:43:31'},
+     {'artista': u'I-ORDORIKA RUPER B',
+      'kanta': u'I-SIGARRILLOS AMARILLOS B',
+      'ordua': u'18:10:58'}]
+
+Adibide bat
+--------------
+
+Ruper detektorearen adibide bat, helbide honetan duzue: `http://www.codesyntax.com/eu/labs/ruper_detector`_
+
 .. _`EITB Irratia`: http://www.eitb.com/eu/irratia/eitb-musika/
+.. _`http://www.codesyntax.com/eu/labs/ruper_detector`: http://www.codesyntax.com/eu/labs/ruper_detector
+.. _Python: http://python.org
+.. _`zc.buildout`: http://buildout.org
+.. _pip: http://www.pip-installer.org
+
+
+
+
 
 
