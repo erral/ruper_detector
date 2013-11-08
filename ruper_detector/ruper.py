@@ -17,6 +17,7 @@ def detektorea(eguna):
         url = EITB_MUSIKA_URL.format(eguna, ordua)
         sock = urllib2.urlopen(url)
         soup = BeautifulSoup(sock.read())
+        sock.close()
         for kanta in soup.find_all('tr'):
             zutabeak = kanta.find_all('td')
             if len(zutabeak) == 3:
