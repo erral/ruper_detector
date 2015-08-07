@@ -4,7 +4,7 @@ import argparse
 import urllib2
 
 
-EITB_MUSIKA_URL = 'http://www.eitb.com/es/modulo/radio/eitbmusika_2col_ajax/?station=1&date={0}&hour={1}'
+EITB_MUSIKA_URL = 'http://www.eitb.eus/es/modulo/radio/eitbmusika_2col_ajax/?station=1&date={0}&hour={1}'
 
 RUPER = u'RUPER'
 

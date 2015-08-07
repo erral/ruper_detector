@@ -4,6 +4,7 @@ Changelog
 1.2 (UNRELEASED)
 -------------------
 
+- Change to www.eitb.eus
 
 1.1 (2013-11-08)
 --------------------
