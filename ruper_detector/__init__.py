@@ -1,1 +1,2 @@
 #
+from ruper import detektorea
