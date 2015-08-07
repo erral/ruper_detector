@@ -1,8 +1,8 @@
 Changelog
 ============
 
-1.2 (UNRELEASED)
--------------------
+1.2 (2015-08-07)
+----------------
 
 - Add `from ruper_detector import detektorea` shortcut
   [erral]
