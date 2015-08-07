@@ -4,7 +4,11 @@ Changelog
 1.2 (UNRELEASED)
 -------------------
 
+- Add `from ruper_detector import detektorea` shortcut
+  [erral]
+
 - Change to www.eitb.eus
+  [erral]
 
 1.1 (2013-11-08)
 --------------------
