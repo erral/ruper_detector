@@ -41,10 +41,9 @@ programa lehen esandako moduan (pip install ruper_detector) edo zure garapenaren
 dependentziak instalatzeko erabiltzen duzun sisteman (gure kasuan `zc.buildout`_
 darabilgun horretarako), eta ondoren inportatu Ruper detektorea zure garapenean::
 
-    >>> from ruper_detector.ruper inport detektorea
-    >>> from pprint import pprint
+    >>> from ruper_detector import detektorea
     >>> kantak = detektorea('20131108')
-    >>> print(ruperren_kantak)
+    >>> ruperren_kantak
     [{'artista': u'ORDORIKA RUPER', 'kanta': u'EGIN KONTU', 'ordua': u'10:43:31'},
      {'artista': u'I-ORDORIKA RUPER B',
       'kanta': u'I-SIGARRILLOS AMARILLOS B',
