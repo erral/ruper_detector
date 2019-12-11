@@ -57,7 +57,7 @@ Adibide bat
 
 Ruper detektorearen adibide bat, helbide honetan duzue: `http://www.codesyntax.com/eu/labs/ruper_detector`_
 
-.. _`EITB Irratia`: https://www.eitb.eus/eu/irratia/eitb-musika/
+.. _`EITB Musika`: https://www.eitb.eus/eu/irratia/eitb-musika/
 .. _`http://www.codesyntax.com/eu/labs/ruper_detector`: http://www.codesyntax.com/eu/labs/ruper_detector
 .. _Python: http://python.org
 .. _`zc.buildout`: http://buildout.org
