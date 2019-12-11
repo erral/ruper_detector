@@ -6,7 +6,14 @@ import urllib2
 
 EITB_MUSIKA_URL = 'http://www.eitb.eus/es/modulo/radio/eitbmusika_2col_ajax/?station=1&date={0}&hour={1}'
 
+EITB_EUSKAL_MUSIKA_URL = 'http://www.eitb.eus/es/modulo/radio/euskalkantak_2col_ajax/?station=1&date={0}&hour={1}'
+
 RUPER = u'RUPER'
+
+IRRATIAK = [
+    {'title': 'EITB Musika', 'url': EITB_MUSIKA_URL},
+    {'title': 'EITB Euskal Kantak', 'url': EITB_EUSKAL_MUSIKA_URL},
+]
 
 
 def detektorea(eguna):
@@ -14,19 +21,24 @@ def detektorea(eguna):
     ruperren_kantak = []
     for int_ordua in range(24):
         ordua = '{0:02}'.format(int_ordua)
-        url = EITB_MUSIKA_URL.format(eguna, ordua)
-        sock = urllib2.urlopen(url)
-        soup = BeautifulSoup(sock.read())
-        sock.close()
-        for kanta in soup.find_all('tr'):
-            zutabeak = kanta.find_all('td')
-            if len(zutabeak) == 3:
-                if RUPER in zutabeak[1].text:
-                    ruperren_kantak.append(dict(
-                        ordua=zutabeak[0].text,
-                        artista=zutabeak[1].text,
-                        kanta=zutabeak[2].text,
-                        ))
+        for irratia in IRRATIAK:
+            irratia_url = irratia['url']
+            irratia_title = irratia['title']
+
+            url = irratia_url.format(eguna, ordua)
+            sock = urllib2.urlopen(url)
+            soup = BeautifulSoup(sock.read())
+            sock.close()
+            for kanta in soup.find_all('tr'):
+                zutabeak = kanta.find_all('td')
+                if len(zutabeak) == 3:
+                    if RUPER in zutabeak[1].text:
+                        ruperren_kantak.append(dict(
+                            ordua=zutabeak[0].text,
+                            artista=zutabeak[1].text,
+                            kanta=zutabeak[2].text,
+                            irratia=irratia_title,
+                            ))
 
     return ruperren_kantak
 
@@ -43,7 +55,7 @@ def inprimatu(eguna):
         print 'Ondo!!! Gaur Ruper {0} aldiz entzungo dugu!! Hauek dira orduak:'.format(len(ruperren_kantak))
 
     for kanta in ruperren_kantak:
-        print kanta['ordua'], kanta['kanta']
+        print kanta['irratia'], kanta['ordua'], kanta['kanta']
 
 
 def main():
