@@ -1,8 +1,11 @@
 ruper_detector
 ===============
 
-Gure bulegoan askotan edukitzen dugu `EITB Irratia`_ jarrita. Eta askotan
+Gure bulegoan askotan edukitzen dugu `EITB Musika`_ jarrita. Eta askotan
 esan ohi dugu Ruper Ordorikarenganako lerratze bat duela irrati horrek.
+
+Orain gainera `EITB Euskal Kantak`_ irratia ere sortu du EITBk, eta hor
+ere Ruper asko entzungo den susmoa dugu.
 
 Gainera gure bulegoa Ruperren fanez beteta dago, eta beste batzuri logurea
 besterik ez digu ematen.
@@ -54,14 +57,9 @@ Adibide bat
 
 Ruper detektorearen adibide bat, helbide honetan duzue: `http://www.codesyntax.com/eu/labs/ruper_detector`_
 
-.. _`EITB Irratia`: http://www.eitb.eus/eu/irratia/eitb-musika/
+.. _`EITB Irratia`: https://www.eitb.eus/eu/irratia/eitb-musika/
 .. _`http://www.codesyntax.com/eu/labs/ruper_detector`: http://www.codesyntax.com/eu/labs/ruper_detector
 .. _Python: http://python.org
 .. _`zc.buildout`: http://buildout.org
 .. _pip: http://www.pip-installer.org
-
-
-
-
-
-
+.. _`EITB Euskal Kantak`: https://www.eitb.eus/eu/irratia/eitb-euskal-kantak/
