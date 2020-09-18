@@ -1,2 +1,2 @@
 #
-from ruper import detektorea
+from ruper_detector.ruper import detektorea

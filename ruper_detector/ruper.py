@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 
 import argparse
-import urllib2
+import urllib.request
 
 
 EITB_MUSIKA_URL = 'http://www.eitb.eus/es/modulo/radio/eitbmusika_2col_ajax/?station=1&date={0}&hour={1}'
@@ -26,8 +26,8 @@ def detektorea(eguna):
             irratia_title = irratia['title']
 
             url = irratia_url.format(eguna, ordua)
-            sock = urllib2.urlopen(url)
-            soup = BeautifulSoup(sock.read())
+            sock = urllib.request.urlopen(url)
+            soup = BeautifulSoup(sock.read(), 'html.parser')
             sock.close()
             for kanta in soup.find_all('tr'):
                 zutabeak = kanta.find_all('td')
@@ -40,22 +40,24 @@ def detektorea(eguna):
                             irratia=irratia_title,
                             ))
 
+            print(ordua, 'done')
+
     return ruperren_kantak
 
 
 def inprimatu(eguna):
-    print 'Ruper detektatzen...'
+    print('Ruper detektatzen...')
     ruperren_kantak = detektorea(eguna)
-    print eguna
+    print(eguna)
     if len(ruperren_kantak) == 1:
-        print 'Gaur Ruper behin bakarrik entzungo dugu. Apuntatu agendan!'
+        print('Gaur Ruper behin bakarrik entzungo dugu. Apuntatu agendan!')
     elif len(ruperren_kantak) == 0:
-        print 'Ohhh! Gaur ez dute Ruper jarriko!!!'
+        print('Ohhh! Gaur ez dute Ruper jarriko!!!')
     else:
-        print 'Ondo!!! Gaur Ruper {0} aldiz entzungo dugu!! Hauek dira orduak:'.format(len(ruperren_kantak))
+        print('Ondo!!! Gaur Ruper {0} aldiz entzungo dugu!! Hauek dira orduak:'.format(len(ruperren_kantak)))
 
     for kanta in ruperren_kantak:
-        print kanta['irratia'], kanta['ordua'], kanta['kanta']
+        print(kanta['irratia'], kanta['ordua'], kanta['kanta'])
 
 
 def main():
