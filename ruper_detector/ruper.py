@@ -42,8 +42,6 @@ def detektorea(eguna):
                             )
                         )
 
-            print(ordua, "done")
-
     return ruperren_kantak
 
 
