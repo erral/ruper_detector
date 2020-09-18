@@ -4,7 +4,11 @@ Changelog
 2.1 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Update README.
+  [erral]
+
+- Remove debugging prints.
+  [erral]
 
 
 2.0 (2020-09-18)
