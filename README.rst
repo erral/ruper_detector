@@ -35,10 +35,15 @@ Pantailan bertan inprimatuko ditu emaitzak::
 
   $ ruper_detector 20131108
     Ruper detektatzen...
-    20131108
-    Ondo!!! Gaur Ruper 2 aldiz entzungo dugu!! Hauek dira orduak:
-    10:43:31 EGIN KONTU
-    18:10:58 I-SIGARRILLOS AMARILLOS B
+    20200918
+    Ondo!!! Gaur Ruper 7 aldiz entzungo dugu!! Hauek dira orduak:
+    EITB Musika 02:37:58 ETXE ALDERA
+    EITB Musika 05:07:55 GALTZETAN GORDETZEKO KOBLAK
+    EITB Euskal Kantak 05:42:12 EGIN KONTU
+    EITB Musika 12:19:12 ZALDIAK NEGARREZ (LIVE)
+    EITB Euskal Kantak 14:51:49 EZ DA POSIBLE (LIVE)
+    EITB Musika 19:53:45 NOR DA (LIVE)
+    EITB Euskal Kantak 21:25:31 NERE FURGOI BELTZA
 
 Beste aukera bat, programa hau zure garapen baten integratzea da. Horretarako instalatu
 programa lehen esandako moduan (pip install ruper_detector) edo zure garapenaren
@@ -46,12 +51,39 @@ dependentziak instalatzeko erabiltzen duzun sisteman (gure kasuan `zc.buildout`_
 darabilgun horretarako), eta ondoren inportatu Ruper detektorea zure garapenean::
 
     >>> from ruper_detector import detektorea
-    >>> kantak = detektorea('20131108')
-    >>> ruperren_kantak
-    [{'artista': u'ORDORIKA RUPER', 'kanta': u'EGIN KONTU', 'ordua': u'10:43:31'},
-     {'artista': u'I-ORDORIKA RUPER B',
-      'kanta': u'I-SIGARRILLOS AMARILLOS B',
-      'ordua': u'18:10:58'}]
+    >>> kantak = detektorea('20201118')
+    >>> from pprint import pprint
+    >>> pprint(kantak)
+    [{'artista': 'ORDORIKA RUPER',
+      'irratia': 'EITB Musika',
+      'kanta': 'ETXE ALDERA',
+      'ordua': '02:37:58'},
+    {'artista': 'ORDORIKA RUPER',
+      'irratia': 'EITB Musika',
+      'kanta': 'GALTZETAN GORDETZEKO KOBLAK',
+      'ordua': '05:07:55'},
+    {'artista': 'ORDORIKA RUPER',
+      'irratia': 'EITB Euskal Kantak',
+      'kanta': 'EGIN KONTU',
+      'ordua': '05:42:12'},
+    {'artista': 'ORDORIKA RUPER',
+      'irratia': 'EITB Musika',
+      'kanta': 'ZALDIAK NEGARREZ (LIVE)',
+      'ordua': '12:19:12'},
+    {'artista': 'ORDORIKA RUPER',
+      'irratia': 'EITB Euskal Kantak',
+      'kanta': 'EZ DA POSIBLE (LIVE)',
+      'ordua': '14:51:49'},
+    {'artista': 'ORDORIKA RUPER',
+      'irratia': 'EITB Musika',
+      'kanta': 'NOR DA (LIVE)',
+      'ordua': '19:53:45'},
+    {'artista': 'ORDORIKA RUPER',
+      'irratia': 'EITB Euskal Kantak',
+      'kanta': 'NERE FURGOI BELTZA',
+      'ordua': '21:25:31'}]
+
+
 
 Adibide bat
 --------------
