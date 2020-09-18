@@ -18,7 +18,8 @@ Broma bat da, hartu umorez!
 Instalazioa eta erabilera
 --------------------------
 
-Ruper detektorea Python_ programazio lengoaiarako egindako programa da. Instalatzeko
+Ruper detektorea Python_ programazio lengoaiarako egindako programa da. Adi, pythonen 3.
+bertsioarekin bakarrik funtzionatzen du-eta. Instalatzeko
 beste edozein Python_ liburutegi bezala instalatu behar da. Gaur egun
 pip_ tresna erabiliz egin dezakezu hori::
 
